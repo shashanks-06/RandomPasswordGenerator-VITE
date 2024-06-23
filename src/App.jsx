@@ -7,11 +7,11 @@ function App() {
       <div className="container">
         <h1>
           Generate a <br />
-          Random Password
+          <span>Random Password</span>
         </h1>
         <div className="display">
           <input type="password" placeholder="Password" id="password" />
-          <FaRegCopy id="copy-icon"/>
+          <FaRegCopy id="copy-icon" />
         </div>
       </div>
     </>
