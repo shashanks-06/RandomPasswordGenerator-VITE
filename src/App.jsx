@@ -3,6 +3,8 @@ import { FaRegCopy } from "react-icons/fa";
 import { BsLightningChargeFill } from "react-icons/bs";
 import { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [password, setPassword] = useState("");
@@ -29,14 +31,18 @@ function App() {
   const passwordHandler = () => {
     const newPassword = passwordGenerator(15);
     setPassword(newPassword);
-    console.log(newPassword);
   };
 
   const copyPassword = (text) => {
     navigator.clipboard
       .writeText(text)
-      .then(() => console.log("Copied"))
-      .catch((err) => console.error("Failed to Copy: ", err));
+      .then(() => {
+        toast.success("Password Copied Successfully!");
+      })
+      .catch((err) => {
+        toast.error("Not Able to Copy Password");
+        console.error("Failed to Copy: ", err);
+      });
   };
 
   return (
@@ -52,7 +58,7 @@ function App() {
             value={password}
             placeholder="Password"
             id="password"
-            onChange={passwordHandler}
+            readOnly
           />
           <CopyToClipboard text={password} onCopy={copyPassword}>
             <button id="copy-icon">
