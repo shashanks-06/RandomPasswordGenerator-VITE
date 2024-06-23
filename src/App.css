@@ -8,6 +8,7 @@
 body {
   background: linear-gradient(to right, #19265b, #201d66, #01264f);
   color: #fff;
+  overflow-y: hidden;
 }
 
 .container {
@@ -66,6 +67,6 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-.container button:hover{
+.container button:hover {
   background: #18ba43fe;
 }
