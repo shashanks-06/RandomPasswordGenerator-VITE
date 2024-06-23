@@ -47,3 +47,23 @@ body {
   outline: 0;
   font-size: 24px;
 }
+
+.container button #generate-icon {
+  width: 28px;
+  margin-right: 10px;
+  font-size: 40px;
+}
+.container button {
+  border: 0;
+  outline: 0;
+  background: #019f55;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 22px;
+  font-weight: 300;
+  padding: 16px 26px;
+  border-radius: 5px;
+  cursor: pointer;
+}

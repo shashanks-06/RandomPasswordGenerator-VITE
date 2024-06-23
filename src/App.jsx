@@ -1,5 +1,6 @@
 import "./App.css";
 import { FaRegCopy } from "react-icons/fa";
+import { BsLightningChargeFill } from "react-icons/bs";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
           <input type="password" placeholder="Password" id="password" />
           <FaRegCopy id="copy-icon" />
         </div>
+        <button>
+          <BsLightningChargeFill id="generate-icon" /> Generate Password
+        </button>
       </div>
     </>
   );
