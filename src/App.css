@@ -36,8 +36,7 @@ body {
   padding: 26px 20px;
   border-radius: 5px;
 }
-.display #copy-icon {
-  color: green;
+.display button #copy-icon {
   width: 30px;
   cursor: pointer;
   font-size: 40px;

@@ -2,6 +2,7 @@ import "./App.css";
 import { FaRegCopy } from "react-icons/fa";
 import { BsLightningChargeFill } from "react-icons/bs";
 import { useState } from "react";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 function App() {
   const [password, setPassword] = useState("");
@@ -31,6 +32,13 @@ function App() {
     console.log(newPassword);
   };
 
+  const copyPassword = (text) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => console.log("Copied"))
+      .catch((err) => console.error("Failed to Copy: ", err));
+  };
+
   return (
     <>
       <div className="container">
@@ -46,7 +54,11 @@ function App() {
             id="password"
             onChange={passwordHandler}
           />
-          <FaRegCopy id="copy-icon" />
+          <CopyToClipboard text={password} onCopy={copyPassword}>
+            <button id="copy-icon">
+              <FaRegCopy />
+            </button>
+          </CopyToClipboard>
         </div>
         <button onClick={passwordHandler}>
           <BsLightningChargeFill id="generate-icon" /> Generate Password
