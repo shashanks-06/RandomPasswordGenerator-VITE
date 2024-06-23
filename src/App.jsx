@@ -31,6 +31,7 @@ function App() {
   const passwordHandler = () => {
     const newPassword = passwordGenerator(15);
     setPassword(newPassword);
+    toast.success("Password Generated!");
   };
 
   const copyPassword = (text) => {
@@ -40,7 +41,7 @@ function App() {
         toast.success("Password Copied Successfully!");
       })
       .catch((err) => {
-        toast.error("Not Able to Copy Password");
+        toast.error("Not Able to Copy Password!");
         console.error("Failed to Copy: ", err);
       });
   };
