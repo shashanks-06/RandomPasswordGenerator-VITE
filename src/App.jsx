@@ -3,6 +3,15 @@ import { FaRegCopy } from "react-icons/fa";
 import { BsLightningChargeFill } from "react-icons/bs";
 
 function App() {
+  const length = 15;
+  const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+  const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const numbers = "0123456789";
+  const symbol = "!@#$%^&*()_+|=-{}[]:;<>~/?";
+  const passwordGenerator = () => {
+    let password = "";
+  };
+
   return (
     <>
       <div className="container">
