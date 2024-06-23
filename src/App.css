@@ -7,4 +7,15 @@
 
 body {
   background: linear-gradient(to right, #19265b, #201d66, #01264f);
+  color: #fff;
+}
+
+.container {
+  margin: 12%;
+  width: 90%;
+  max-width: 700px;
+}
+
+#copy-icon {
+  color: green;
 }

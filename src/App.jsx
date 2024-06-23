@@ -11,7 +11,7 @@ function App() {
         </h1>
         <div className="display">
           <input type="password" placeholder="Password" id="password" />
-          <FaRegCopy />
+          <FaRegCopy id="copy-icon"/>
         </div>
       </div>
     </>
